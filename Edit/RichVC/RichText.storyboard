@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rich Text View Controller-->
+        <scene sceneID="usx-JG-E7a">
+            <objects>
+                <viewController storyboardIdentifier="RichTextViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2T2-a7-GHP" customClass="RichTextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="olO-ah-JzT"/>
+                        <viewControllerLayoutGuide type="bottom" id="KSF-4G-1jU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nFv-Xf-VZM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wtU-4A-O8G">
+                                <rect key="frame" x="0.0" y="20" width="375" height="562"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wtU-4A-O8G" secondAttribute="trailing" id="EvO-Mb-DyS"/>
+                            <constraint firstAttribute="bottom" secondItem="wtU-4A-O8G" secondAttribute="bottom" constant="85" id="Uok-pt-Rva"/>
+                            <constraint firstItem="wtU-4A-O8G" firstAttribute="top" secondItem="olO-ah-JzT" secondAttribute="bottom" id="XyR-mq-DcS"/>
+                            <constraint firstItem="wtU-4A-O8G" firstAttribute="leading" secondItem="nFv-Xf-VZM" secondAttribute="leading" id="bWK-hs-4iR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wtU-4A-O8G"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="EvO-Mb-DyS"/>
+                                <exclude reference="XyR-mq-DcS"/>
+                                <exclude reference="bWK-hs-4iR"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="wtU-4A-O8G"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="EvO-Mb-DyS"/>
+                                <include reference="XyR-mq-DcS"/>
+                                <include reference="bWK-hs-4iR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="wtU-4A-O8G" id="dEZ-dr-4iw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DSR-xh-vfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178.40000000000001" y="182.15892053973016"/>
+        </scene>
+        <!--Rich Text PreviewVC-->
+        <scene sceneID="n4k-Fw-R9L">
+            <objects>
+                <viewController storyboardIdentifier="RichTextPreviewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F8X-lT-Tfg" customClass="RichTextPreviewVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g6s-Qw-6MC"/>
+                        <viewControllerLayoutGuide type="bottom" id="F3X-Le-OdF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vl2-Kh-OKx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CU4-8V-UvR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CU4-8V-UvR" firstAttribute="leading" secondItem="Vl2-Kh-OKx" secondAttribute="leading" id="5zC-PL-oI2"/>
+                            <constraint firstItem="CU4-8V-UvR" firstAttribute="top" secondItem="g6s-Qw-6MC" secondAttribute="bottom" id="MQg-Q0-60m"/>
+                            <constraint firstItem="F3X-Le-OdF" firstAttribute="top" secondItem="CU4-8V-UvR" secondAttribute="bottom" id="PKv-0e-yj1"/>
+                            <constraint firstAttribute="trailing" secondItem="CU4-8V-UvR" secondAttribute="trailing" id="WM7-R3-oqf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="CU4-8V-UvR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="PKv-0e-yj1"/>
+                                <exclude reference="5zC-PL-oI2"/>
+                                <exclude reference="MQg-Q0-60m"/>
+                                <exclude reference="WM7-R3-oqf"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="CU4-8V-UvR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="PKv-0e-yj1"/>
+                                <include reference="5zC-PL-oI2"/>
+                                <include reference="MQg-Q0-60m"/>
+                                <include reference="WM7-R3-oqf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="CU4-8V-UvR" id="Xgw-6g-ZNm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Zt-xy-EUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="277"/>
+        </scene>
+    </scenes>
+</document>
